@@ -1,20 +1,21 @@
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>	//For calloc() and free()
+#include <string.h>	//For strlen()
+
+char * urlify(char * str) {
+	int n = strlen(str);
+	char * url = calloc(n, sizeof(char));
+
+	//TODO
+	return url;
+}
 
 int main (void) {
-	char * url = "Mr John Smith   ";
+	char * str = "Mr John Smith   ";
 
-	int n = strlen(url);
-
-	char * delim = " ";
-	char * token = strtok(url, delim);
-	printf("%s", token);
-	token = strtok(NULL, delim);
-
-	while (token != NULL) {
-		printf("\%20%s", token);
-		token = strtok(NULL, delim);
-	}
+	char * url = urlify(str);
+	printf("%s\n", url);
+	free(url);
 
 	return 0;
 }
