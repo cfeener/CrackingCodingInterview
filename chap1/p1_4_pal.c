@@ -2,7 +2,7 @@
  * This is a palindrome checking function for CtCI problem 1.4
  */
 
-#define STRING "Madam, I'm Adam!"
+#define STRING "Change this string to anything you like"
 
 #include <stdio.h>
 #include <stdbool.h>	//For general boolean types and functions

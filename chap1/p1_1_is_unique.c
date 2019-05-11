@@ -1,3 +1,7 @@
+/* Christopher Feener
+ * Checks for duplicate characters in a string.
+ */
+
 #include <stdio.h>
 #include <string.h>	//For strlen()
 #include <ctype.h>	//For tolower()

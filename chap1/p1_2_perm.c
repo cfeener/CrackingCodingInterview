@@ -1,3 +1,7 @@
+/* Christopher Feener
+ * Check to see if two sentences are permutations of each other.
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>

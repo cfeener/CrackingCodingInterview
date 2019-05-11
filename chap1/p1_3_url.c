@@ -1,3 +1,8 @@
+/* Christopher Feener
+ * Makes a valid string a URL. May try processing in-place.
+ * Main worry is losing current robustness of program.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>	//For calloc() and free()
 #include <string.h>	//For strlen()
