@@ -32,7 +32,7 @@ bool oneAway (char * s1, char * s2) {
 
 	for (i = 0; i < ALPHA; i++) {	//Count matches
 		if ((freq1[i] != 0) && (freq1[i] == freq2[i]))	//Must be a non-zero match
-			matches++;
+			matches += freq1[i];	//Increase by letters that match! (Not frequencies that match.)
 	}
 
 	if ((abs(n1 - matches) > 1) || (abs(n2 - matches) > 1))
