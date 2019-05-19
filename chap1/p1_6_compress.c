@@ -3,7 +3,7 @@
  * Compresses a string of characters.
  * COMPILE: Use -lm
  */
-#define STRING "aabcccccaaa"
+#define STRING "abcdefghijkmnop" //"aabcccccaaa"
 
 #include <stdio.h>
 #include <string.h>	//For strlen()
@@ -25,11 +25,16 @@ void insertChar(char ins, char * output) {
 
 char * compress (char * str) {
 	int n = strlen(str);
-	char * output = (char *)calloc(n, sizeof(char));
+	printf("Initial size: %d\n", n);
 
-	if (n > 0)
-		output[0] = str[0];
-	else return output;	//Empty string.
+	if (n == 0)
+		return str;	//Empty string.
+
+	/* Dynamically allocated for easier passing to functions
+	 * Worst case (no repeated characters): Numbers will make string about twice as long
+	 */
+	char * output = (char *)calloc(2 * n + 1, sizeof(char));
+	output[0] = str[0];
 
 	int i, j = 0, temp_count = 1;
 	for (i = 1; i < n; i++) {
@@ -44,7 +49,14 @@ char * compress (char * str) {
 	}
 	insertDigit(temp_count, output);	//Insert count of final sequence
 
-	return output;
+	int n2 = strlen(output);
+	char * ans = (char *)calloc(n2, sizeof(char));
+	for (i = 0; i < n2; i++)
+		ans[i] = output[i];
+	free(output);
+
+	printf("Final size: %d\n", (int)strlen(ans));
+	return ans;
 }
 
 int main (void) {
