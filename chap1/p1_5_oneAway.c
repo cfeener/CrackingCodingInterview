@@ -1,8 +1,8 @@
 /* Christopher Feener
  * 5/12/2019
- * Verfies that two words have at most one different character.
+ * Verifies that two words have at most one different character.
  * NOTE: This was originally intended to process words, and 
- * 	later incorporated parts for full sentences.
+ * 	later incorporated the ability for full sentences.
  */
 
 #define STRING1 "b....a324l654	e.... 45"
