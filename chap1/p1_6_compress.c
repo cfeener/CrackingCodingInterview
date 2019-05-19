@@ -17,7 +17,7 @@ void insertDigit(int temp_count, char * output) {
 	strcat(output, digits);
 }
 
-void insertChar(char ins, output) {
+void insertChar(char ins, char * output) {
 	char new_char[2];
 	sprintf(new_char, "%c", ins);
 	strcat(output, new_char);
@@ -33,17 +33,16 @@ char * compress (char * str) {
 
 	int i, j = 0, temp_count = 1;
 	for (i = 1; i < n; i++) {
-		if (str[i] == str[j]) {
+		if (str[i] == str[j])	//Count repeating characters
 			temp_count++;
-		} else {
-			insertDigit(temp_count, output);
-			j = i;
-			temp_count = 1;
-			insertChar(str[i], output);
+		else {
+			insertDigit(temp_count, output);	//Insert count of repeated characters
+			insertChar(str[i], output);	//Insert new character
+			j = i;	//Take note of position of new character
+			temp_count = 1;	//Reset count of repeated characters
 		}
 	}
-
-	insertDigit(temp_count, output);
+	insertDigit(temp_count, output);	//Insert count of final sequence
 
 	return output;
 }
