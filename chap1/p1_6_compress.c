@@ -51,8 +51,14 @@ char * compress (char * str) {
 
 	int n2 = strlen(output);
 	char * ans = (char *)calloc(n2, sizeof(char));
-	for (i = 0; i < n2; i++)
-		ans[i] = output[i];
+	if (n2 < n) {
+		for (i = 0; i < n2; i++)
+			ans[i] = output[i];
+	} else {
+		printf("String already optimal\n");
+		for (i = 0; i < n; i++)
+			ans[i] = str[i];
+	}
 	free(output);
 
 	printf("Final size: %d\n", (int)strlen(ans));
@@ -63,7 +69,7 @@ int main (void) {
 	char * str = STRING;
 
 	char * output = compress(str);
-	printf("%s\n", output);
+	printf("OUTPUT: %s\n", output);
 	free(output);
 
 	return 0;
