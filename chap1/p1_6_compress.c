@@ -1,7 +1,7 @@
 /* Christopher Feener
  * 5/19/2019
  * Compresses a string of characters.
- * COMPILE: Use -lm and -g tags
+ * COMPILE: Use -lm
  */
 #define STRING "aabcccccaaa"
 
@@ -15,6 +15,12 @@ void insertDigit(int temp_count, char * output) {
 	char digits[size];
 	sprintf(digits, "%d", temp_count);
 	strcat(output, digits);
+}
+
+void insertChar(char ins, output) {
+	char new_char[2];
+	sprintf(new_char, "%c", ins);
+	strcat(output, new_char);
 }
 
 char * compress (char * str) {
@@ -31,12 +37,9 @@ char * compress (char * str) {
 			temp_count++;
 		} else {
 			insertDigit(temp_count, output);
-
-			char new_char[2];
-			sprintf(new_char, "%c", str[i]);
-			strcat(output, new_char);
 			j = i;
 			temp_count = 1;
+			insertChar(str[i], output);
 		}
 	}
 
