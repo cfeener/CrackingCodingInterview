@@ -10,6 +10,13 @@
 #include <stdlib.h>	//For calloc()
 #include <math.h>	//For ceil()
 
+void insertDigit(int temp_count, char * output) {
+	int size = (int)((ceil(log10(temp_count)) + 1) * sizeof(char));
+	char digits[size];
+	sprintf(digits, "%d", temp_count);
+	strcat(output, digits);
+}
+
 char * compress (char * str) {
 	int n = strlen(str);
 	char * output = (char *)calloc(n, sizeof(char));
@@ -23,10 +30,7 @@ char * compress (char * str) {
 		if (str[i] == str[j]) {
 			temp_count++;
 		} else {
-			int size = (int)((ceil(log10(temp_count)) + 1) * sizeof(char));
-			char digits[size];
-			sprintf(digits, "%d", temp_count);
-			strcat(output, digits);
+			insertDigit(temp_count, output);
 
 			char new_char[2];
 			sprintf(new_char, "%c", str[i]);
@@ -35,6 +39,8 @@ char * compress (char * str) {
 			temp_count = 1;
 		}
 	}
+
+	insertDigit(temp_count, output);
 
 	return output;
 }
