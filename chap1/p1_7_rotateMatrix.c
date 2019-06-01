@@ -6,6 +6,8 @@
 #define Matrix_Size 3
 
 #include <stdio.h>
+#include <inttypes.h>	//For uint32_t
+#include <stdlib.h>	//For calloc()
 
 //TODO: Swap 4 variables in much the same way as swapping 2 variables (5 lines), 
 //	OR 'xor'-swap 3 times (3 * 3 lines).
@@ -20,8 +22,9 @@ int main (void) {
 	for (i = 0; i < n; i++) {	//Rows
 		for (j = 0; j < n; j++) {	//Columns
 			matrix[i * n + j] = i * n + j;
-			printf("%lu\n", matrix[i * n + j]);	//TODO: Debug
+			printf("%u ", matrix[i * n + j]);	//TODO: Debug
 		}
+		printf("\n");
 	}
 
 	return 0;
