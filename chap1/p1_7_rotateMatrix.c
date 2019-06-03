@@ -3,11 +3,13 @@
  * Rotates an array of 4-byte values 90-degrees.
  */
 
-#define Matrix_Size 3
+#define MATRIX_DIMENSIONS 4
 
 #include <stdio.h>
 #include <inttypes.h>	//For uint32_t
 #include <stdlib.h>	//For calloc()
+#include <time.h>	//For time()
+#include <assert.h>	//For assert()
 
 //Method: Swap 4 variables in much the same way as swapping 2 variables (5 lines)
 
@@ -36,14 +38,16 @@ void rotateMatrix(uint32_t * matrix, int n) {
 
 int main (void) {
 
-	int n = Matrix_Size;	//3X3 Matrix
+	int n = MATRIX_DIMENSIONS;
+	assert(n > 0);
 	uint32_t * matrix = calloc(n * n, sizeof(uint32_t));
 
 	//Initialize sample values:
+	srand(time(NULL));
 	int i, j;
 	for (i = 0; i < n; i++) {	//Rows
 		for (j = 0; j < n; j++)	//Columns
-			matrix[i * n + j] = i * n + j;
+			matrix[i * n + j] = rand() % 1000;	//NOTE: Thousand is ambiguous.
 	}
 
 	printf("Before: \n");
