@@ -8,9 +8,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Testing in main...");
+		System.out.println("Testing in main...");	//TODO: Debug
 		
-		RemoveDups list = new RemoveDups();	//Specialized LinkedList for this exercise.
+		RemoveDups list = new RemoveDups(1, 2, 3, 4, 3);	//Specialized LinkedList for this exercise.
 
 	}
 

@@ -4,7 +4,6 @@
 
 package p2_1_removeDups;
 
-import java.util.Collection;
 import java.util.LinkedList;
 
 public class RemoveDups extends LinkedList<Integer>{
@@ -17,15 +16,11 @@ public class RemoveDups extends LinkedList<Integer>{
 		super();
 		for (int i : a) {
 			this.add(i);
+			System.out.println("" + i);	//TODO: Debug
 		}
 	}
 
-	public RemoveDups(Collection<? extends Integer> c) {
-		super(c);
-		// TODO Auto-generated constructor stub
-	}
-
-	public boolean set(int x) {
+	public boolean markAsDup(int x) {
 		if (this.get(x) == null)
 			return false;
 		this.set(x, -1);	//Mark as duplicate; will not copy into new array.
