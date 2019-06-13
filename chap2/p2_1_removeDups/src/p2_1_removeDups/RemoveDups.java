@@ -8,7 +8,7 @@ import java.util.LinkedList;
 
 public class RemoveDups extends LinkedList<Integer>{
 	/** Added on 6/12/2019
-	 * 
+	 *  Requested by Eclipse.
 	 */
 	private static final long serialVersionUID = 1435215341850384229L;
 	
@@ -16,7 +16,7 @@ public class RemoveDups extends LinkedList<Integer>{
 		super();
 		for (int i : a) {
 			this.add(i);
-			System.out.println("" + i);	//TODO: Debug
+			System.out.println("" + i);
 		}
 	}
 
