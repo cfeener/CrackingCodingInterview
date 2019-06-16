@@ -32,13 +32,4 @@ public class RemoveDups extends LinkedList<Integer>{
 		dups++;
 		return true;
 	}
-	
-	/*public void removals() {
-		int j = n - 1;
-		for (int i = 0; i < n; i++) {
-			if (this.get(i) == -1) {
-				
-			}
-		}
-	}*/
 }

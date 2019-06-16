@@ -44,10 +44,7 @@ public class Main {
 			}
 			i++;
 		}
-		
-		/*Solution 2: In place
-		System.out.println("After: ");
-		list.removals();*/
+
 	}
 
 }
