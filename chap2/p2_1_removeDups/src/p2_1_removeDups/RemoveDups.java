@@ -11,19 +11,34 @@ public class RemoveDups extends LinkedList<Integer>{
 	 *  Requested by Eclipse.
 	 */
 	private static final long serialVersionUID = 1435215341850384229L;
+	static int dups = 0;
+	static int n = 0;
+	boolean is_dup[];
 	
 	public RemoveDups(int ...a) {	//Constructor!
 		super();
 		for (int i : a) {
 			this.add(i);
-			System.out.println("" + i);
+			n++;
+			System.out.println("" + i);	//Debug
 		}
+		is_dup = new boolean [n];
 	}
 
-	public boolean markAsDup(int x) {
+	public boolean markAsDup(int x) {	//Pass index x.
 		if (this.get(x) == null)
 			return false;
-		this.set(x, -1);	//Mark as duplicate; will not copy into new array.
+		is_dup[x] = true;	//Mark as duplicate; will not copy into new array.
+		dups++;
 		return true;
 	}
+	
+	/*public void removals() {
+		int j = n - 1;
+		for (int i = 0; i < n; i++) {
+			if (this.get(i) == -1) {
+				
+			}
+		}
+	}*/
 }

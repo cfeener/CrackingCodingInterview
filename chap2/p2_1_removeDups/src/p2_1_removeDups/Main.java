@@ -31,16 +31,23 @@ public class Main {
 			i++;
 		}
 		
+		/* Solution 1: New list*/
 		LinkedList <Integer> result = new LinkedList <Integer>();
 		
 		System.out.println("After: ");
 		
+		i = 0;
 		for (Integer a : list) {
-			if (a != -1) {
+			if (list.is_dup[i] == false) {
 				result.add(a);
 				System.out.println("" + a);
 			}
+			i++;
 		}
+		
+		/*Solution 2: In place
+		System.out.println("After: ");
+		list.removals();*/
 	}
 
 }
