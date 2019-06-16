@@ -17,6 +17,13 @@ public class Main {
 		}
 		
 		list.print();
+		
+		list.checkForDups();
+		list.removals();
+		
+		System.out.println("AFTER: ");
+		
+		list.print();
 	}
 
 }

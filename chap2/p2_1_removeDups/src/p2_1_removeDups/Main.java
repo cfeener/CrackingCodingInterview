@@ -10,7 +10,6 @@ import java.util.LinkedList;	//For the resulting linked list only.
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println("Before: ");
 		
 		RemoveDups list = new RemoveDups(8, 1, 0, 2, 9, 1,
@@ -18,8 +17,6 @@ public class Main {
 
 		int i = 0, j = 0;
 		for (Integer a : list) {
-			if (list.get(i) == -1)
-				continue;
 			for (Integer b : list) {
 				if (i == j)
 					continue;
