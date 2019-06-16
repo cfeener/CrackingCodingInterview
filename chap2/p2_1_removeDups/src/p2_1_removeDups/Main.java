@@ -12,8 +12,8 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Before: ");
 		
-		RemoveDups list = new RemoveDups(8, 1, 0, 2, 9, 1,
-				0, 0, 2, 3, 0, 6);	//Specialized LinkedList for this exercise.
+		RemoveDups list = new RemoveDups(1,1,1,1,1/*8, 1, 0, 2, 9, 1,
+				0, 0, 2, 3, 0, 6*/);	//Specialized LinkedList for this exercise.
 
 		int i = 0, j = 0;
 		for (Integer a : list) {

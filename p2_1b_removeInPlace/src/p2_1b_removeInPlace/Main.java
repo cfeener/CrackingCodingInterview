@@ -10,8 +10,10 @@ public class Main {
 	public static void main(String[] args) {
 		UList list = new UList();
 
-		int a[] = {8, 1, 0, 2, 9, 1,
-			0, 0, 2, 3, 0, 6};
+		//Test input:
+		int a[] = {1,1,1,1,1,1/*8, 1, 0, 2, 9, 1,
+			0, 0, 2, 3, 0, 6*/};
+		
 		for (int i : a) {
 			list.insert(i);
 		}
@@ -19,9 +21,8 @@ public class Main {
 		list.print();
 		
 		list.checkForDups();
-		list.removals();
-		
-		System.out.println("AFTER: ");
+		if (list.removals())	//If not empty
+			System.out.println("AFTER: ");
 		
 		list.print();
 	}
