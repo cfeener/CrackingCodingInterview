@@ -1,3 +1,10 @@
+/* Christopher Feener
+ * 6/16/2019
+ * Return Kth element from tail.
+ * Note: Returns zero for values below 1, and returns 
+ * 		first element for values greater than total list length.
+ */
+
 package p2_2_Kth_from_Last;
 
 public class KList {
@@ -21,7 +28,7 @@ public class KList {
 		}
 	}
 	
-	void deleteTail(int index) {
+	void deleteTail(int index) {	//To be used with queue
 		Node temp = head;
 		int i = 0;
 		while (i < index - 1) {	//Traverse just before tail
@@ -33,19 +40,20 @@ public class KList {
 	}
 	
 	int accessFromTail(int index) {
+		if (index <= 0) return 0;
 		int i = 0;
-		KList helper_list = new KList();
+		KList queue = new KList();
 		Node temp = head;
 		while (temp != null) {
 			if (i > index) 
-				helper_list.deleteTail(index);
-			helper_list.insert(temp.data);
+				queue.deleteTail(index);
+			queue.insert(temp.data);
 			temp = temp.next;
 			i++;
 		}
-		temp = helper_list.head;
-		while (temp.next != null)
+		temp = queue.head;	//Most recent element; also is the list's tail.
+		while (temp.next != null)	//Traverse to end of queue
 			temp = temp.next;
-		return temp.data;
+		return temp.data;	//Kth element from end of list.
 	}
 }
