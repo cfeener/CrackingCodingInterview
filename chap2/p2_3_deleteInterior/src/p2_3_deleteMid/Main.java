@@ -10,6 +10,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		//Test values:
+		int x = 3;
 		int [] a = {8, 1, 0, 2, 9, 1,
                 0, 0, 2, 3, 0, 6};
 		
@@ -18,7 +19,7 @@ public class Main {
 		list.printList();
 		
 		System.out.println("After: ");
-		list.deleteInterior(12);
+		list.deleteInterior(x);
 		list.printList();
 	}
 

@@ -46,15 +46,17 @@ public class DList {
 		Node prev = head;
 		Node temp = head.next;
 		while (temp != null) {
-			//if (temp.next == null && k - i )
 			if (i < k) {
 				prev = prev.next;
 				temp = temp.next;
 				i++;
 			} else break;
 		}
-		if (k - i >= 0)	//If there is a node after temp, delete temp.
+		if (prev.next == null) {
+			System.out.println("Nothing deleted");
+			return;
+		}
+		else
 			prev.next = temp.next;
-		else System.out.println("Nothing deleted");
 	}
 }
