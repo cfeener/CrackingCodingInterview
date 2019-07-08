@@ -18,8 +18,10 @@ public class Main {
 		System.out.println("Before: ");
 		list.printList();
 		
-		System.out.println("After: ");
+		System.out.println("Deleting node " + x);
+		
 		list.deleteInterior(x);
+		System.out.println("After: ");
 		list.printList();
 	}
 
