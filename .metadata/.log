@@ -1713,3 +1713,123 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 !MESSAGE Unexpected error while loading repository template extensions
 !SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2019-06-17 11:49:21.618
 !MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
+!SESSION 2020-06-21 20:56:17.187 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -data C:\Users\chess\CrackingCodingInterview -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2020-06-21 20:56:27.256
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.poll.PollNewsFeedsHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2020-06-21 20:56:27.270
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.read.ReadNewsItemsHandler
+
+!ENTRY org.eclipse.jface 2 0 2020-06-21 20:56:28.891
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-06-21 20:56:28.891
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@27d98bef,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@349312d5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-06-21 20:56:35.098
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\chess'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2020-06-21 20:56:35.140
+!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.gef.ui.palette_view" id and the "Palette" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2020-06-21 20:56:35.159
+!MESSAGE Removing HandlerImpl with the "org.eclipse.recommenders.news.rcp.handler.pollNewsFeeds" id.It points to the non available "bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.poll.PollNewsFeedsHandler" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2020-06-21 20:56:35.191
+!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.mylyn.builds.navigator.builds" id and the "Builds" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2020-06-21 20:56:35.209
+!MESSAGE Removing HandlerImpl with the "org.eclipse.recommenders.news.rcp.handler.readNewsItems" id.It points to the non available "bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.read.ReadNewsItemsHandler" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2020-06-21 20:56:35.235
+!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.wst.common.snippets.internal.ui.SnippetsView" id and the "Snippets" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-06-21 20:57:17.217
+!MESSAGE An internal error occurred during: "Auto share git projects".
+!STACK 0
+java.nio.file.InvalidPathException: Illegal char <:> at index 4: .git:
+	at sun.nio.fs.WindowsPathParser.normalize(WindowsPathParser.java:182)
+	at sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:153)
+	at sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:77)
+	at sun.nio.fs.WindowsPath.parse(WindowsPath.java:94)
+	at sun.nio.fs.WindowsFileSystem.getPath(WindowsFileSystem.java:255)
+	at sun.nio.fs.AbstractPath.resolve(AbstractPath.java:53)
+	at org.eclipse.egit.core.RepositoryUtil.getAbsoluteRepositoryPath(RepositoryUtil.java:666)
+	at org.eclipse.egit.core.RepositoryUtil.toDirSet(RepositoryUtil.java:511)
+	at org.eclipse.egit.core.RepositoryUtil.getRepositories(RepositoryUtil.java:475)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.visitConnect(Activator.java:740)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.run(Activator.java:689)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-06-21 20:57:18.467
+!MESSAGE An internal error occurred during: "Auto share git projects".
+!STACK 0
+java.nio.file.InvalidPathException: Illegal char <:> at index 4: .git:
+	at sun.nio.fs.WindowsPathParser.normalize(WindowsPathParser.java:182)
+	at sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:153)
+	at sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:77)
+	at sun.nio.fs.WindowsPath.parse(WindowsPath.java:94)
+	at sun.nio.fs.WindowsFileSystem.getPath(WindowsFileSystem.java:255)
+	at sun.nio.fs.AbstractPath.resolve(AbstractPath.java:53)
+	at org.eclipse.egit.core.RepositoryUtil.getAbsoluteRepositoryPath(RepositoryUtil.java:666)
+	at org.eclipse.egit.core.RepositoryUtil.toDirSet(RepositoryUtil.java:511)
+	at org.eclipse.egit.core.RepositoryUtil.getRepositories(RepositoryUtil.java:475)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.visitConnect(Activator.java:740)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.run(Activator.java:689)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-06-21 20:57:19.462
+!MESSAGE An internal error occurred during: "Auto share git projects".
+!STACK 0
+java.nio.file.InvalidPathException: Illegal char <:> at index 4: .git:
+	at sun.nio.fs.WindowsPathParser.normalize(WindowsPathParser.java:182)
+	at sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:153)
+	at sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:77)
+	at sun.nio.fs.WindowsPath.parse(WindowsPath.java:94)
+	at sun.nio.fs.WindowsFileSystem.getPath(WindowsFileSystem.java:255)
+	at sun.nio.fs.AbstractPath.resolve(AbstractPath.java:53)
+	at org.eclipse.egit.core.RepositoryUtil.getAbsoluteRepositoryPath(RepositoryUtil.java:666)
+	at org.eclipse.egit.core.RepositoryUtil.toDirSet(RepositoryUtil.java:511)
+	at org.eclipse.egit.core.RepositoryUtil.getRepositories(RepositoryUtil.java:475)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.visitConnect(Activator.java:740)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.run(Activator.java:689)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2020-06-21 21:02:31.268
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Build path contains duplicate entry: 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8' for project 'p2_3_deleteInterior']
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:798)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3608)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3568)
+	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3581)
+	at org.eclipse.jdt.internal.ui.preferences.ClasspathContainerPreferencePage$1.run(ClasspathContainerPreferencePage.java:122)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SUBENTRY 1 org.eclipse.jdt.core 4 977 2020-06-21 21:02:31.269
+!MESSAGE Build path contains duplicate entry: 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8' for project 'p2_3_deleteInterior'
